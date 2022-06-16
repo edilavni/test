@@ -15,7 +15,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
-    <h1>Hello</h1>
+    <h5>Start Ad-Placer!</h5>
+<input type="submit" value="Start" onclick="submit()">
+
+<script type="text/javascript">
+    function submit() {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                alert(xhr.response);
+            }
+        }
+        xhr.open('get', 'https://httpbin.org/get?key=key&value=value', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send();
+    }
+alert("genn");
+  alert({{key}});
+</script>
+    
+   
+    
   </body>
 </html> 
 
