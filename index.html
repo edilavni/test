@@ -19,7 +19,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <input type="submit" value="Start" onclick="submit()">
 
 <script type="text/javascript">
-    function submit() {
+  //retrieve url parameters
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const _key = urlParams.get('key');
+  const _value = urlParams.get('value');
+  
+  //push into GTM datalayer
+  dataLayer.push({
+  'key': _key,
+  'value': _value
+    
+ 
+ });
+})  
+  
+  
+  function submit() {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
