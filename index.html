@@ -22,12 +22,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript">
   
   function submit() {
-        var obj =$(myResult);
+        var obj =document.getElementById("myResult");
         alert(obj);
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 alert(xhr.response);
+              obj.text = xhr.response;
             }
         }
     
