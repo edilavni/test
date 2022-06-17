@@ -15,20 +15,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
     
-    <h5>V6</h5>
+    <h5>V7</h5>
 <input type="submit" value="Start" onclick="submit()">
 
 <script type="text/javascript">
   
   function submit() {
-        alert("result :"+dataLayer.key);
+        
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 alert(xhr.response);
             }
         }
-        xhr.open('get', 'https://httpbin.org/get?key={{param}}&value=value', true);
+    alert('https://httpbin.org/get?key='+dataLayer[3].key+'&value='+dataLayer[4].value);
+        xhr.open('get', 'https://httpbin.org/get?key='+dataLayer[3].key+'&value='+dataLayer[4].value, true);
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.send();
     }
