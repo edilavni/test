@@ -28,7 +28,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 alert(xhr.response);
-              obj.text = xhr.response;
+              obj.value = xhr.response;
             }
         }
     
