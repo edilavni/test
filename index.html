@@ -22,15 +22,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h5>Result :</h5>
     <textarea id="myResult" style="width:700px;height:500px;">
 </textarea>
+    
+    <br/>
+    <h5>DataLayer :</h5>
+    <textarea id="dataLayer" style="width:700px;height:500px;">
+</textarea>
+    
 <script type="text/javascript">
   
   function submit() {
         var obj =document.getElementById("myResult");
+        var obk2 - document.getElementById("dataLayer");
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 //alert(xhr.response);
                 obj.value = xhr.response;
+                obj2.value = JSON.stringify(dataLayer);
             }
         }
     
